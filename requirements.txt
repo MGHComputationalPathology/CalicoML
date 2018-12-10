@@ -1,0 +1,13 @@
+seaborn
+pandas
+flask
+pkgconfig
+numpy
+scipy
+scikit-learn
+prettytable
+openpyxl
+matplotlib
+progressbar2
+tzlocal
+lifelines==0.9.4

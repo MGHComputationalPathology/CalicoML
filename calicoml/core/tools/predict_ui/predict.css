@@ -1,0 +1,296 @@
+#data_container
+{
+  background:white;
+  border:1px solid gray;
+  height:400px;
+  outline:0;
+  width:100%;
+}
+
+#model_info
+{
+  background-color:#f5f5f5;
+  border:1px solid gray;
+  padding:15px;
+}
+
+.btn-file
+{
+  overflow:hidden;
+  position:relative;
+}
+
+.btn-file input[type=file]
+{
+  background:white;
+  cursor:inherit;
+  display:block;
+  filter:alpha(opacity=0);
+  font-size:100px;
+  min-height:100%;
+  min-width:100%;
+  opacity:0;
+  outline:none;
+  position:absolute;
+  right:0;
+  text-align:right;
+  top:0;
+}
+
+.cell-move-handle:hover
+{
+  background:#b6b9bd;
+}
+
+.container .text-muted
+{
+  margin:20px 0;
+}
+
+.editor-percentcomplete-buttons
+{
+  float:right;
+}
+
+.editor-percentcomplete-buttons button
+{
+  width:80px;
+}
+
+.editor-percentcomplete-helper
+{
+  background:url(../images/editor-helper-bg.gif) no-repeat top left;
+  border:0 solid gray;
+  display:none;
+  height:140px;
+  left:-9px;
+  overflow:visible;
+  padding-left:9px;
+  position:absolute;
+  top:-2px;
+  width:120px;
+}
+
+.editor-percentcomplete-picker
+{
+  background:url(../images/pencil.gif) no-repeat center center;
+  display:inline-block;
+  float:right;
+  height:100%;
+  overflow:visible;
+  position:relative;
+  width:16px;
+  z-index:1000;
+}
+
+.editor-percentcomplete-picker:hover .editor-percentcomplete-helper,.editor-percentcomplete-helper:hover
+{
+  display:block;
+}
+
+.editor-percentcomplete-slider
+{
+  float:left;
+}
+
+.editor-percentcomplete-wrapper
+{
+  background:beige;
+  border:1px solid gray;
+  border-left:0;
+  height:98px;
+  padding:20px 8px;
+  width:100%;
+}
+
+.footer
+{
+  background-color:#f5f5f5;
+  bottom:0;
+  height:60px;
+  position:absolute;
+  width:100%;
+}
+
+.footer > .container
+{
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.model_field_name
+{
+  font-weight:bold;
+  padding-right:20px;
+}
+
+.percent-complete-bar
+{
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  display:inline-block;
+  height:6px;
+}
+
+.slick-cell.cell-move-handle
+{
+  background:#efefef;
+  border-right:solid gray;
+  cursor:move;
+  font-weight:bold;
+  text-align:right;
+}
+
+.slick-cell.task-name
+{
+  font-weight:bold;
+  text-align:right;
+}
+
+.slick-cell.task-percent
+{
+  text-align:right;
+}
+
+.slick-header
+{
+  border:1px solid gray;
+  border-bottom:0;
+  border-top:0;
+  box-sizing:content-box;
+  color:black;
+  height:24px;
+  line-height:24px;
+}
+
+.slick-header #txtSearch
+{
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border:1px solid silver;
+  margin:0 4px;
+  padding:2px;
+}
+
+.slick-header .slick-column-name
+{
+  display:inline-block;
+  font-weight:bold;
+  margin:auto auto auto 6px;
+}
+
+.slick-header .ui-icon
+{
+  background-color:transparent;
+  border-color:transparent;
+  margin:4px 4px auto 6px;
+}
+
+.slick-header .ui-icon.ui-state-hover
+{
+  background-color:white;
+}
+
+.slick-header-column.ui-state-default
+{
+  background:none;
+  background-color:#505050;
+  border:none;
+  color:#eeeeee;
+  font-family:Arial, Verdana, Helvetica, sans-serif;
+  font-size:13px;
+  height:40px;
+  line-height:40px;
+  padding:0;
+  text-shadow:none;
+}
+
+.slick-row .cell-actions
+{
+  text-align:left;
+}
+
+.slick-row.complete
+{
+  background-color:#DFD;
+  color:#555;
+}
+
+.slick-row.selected .cell-move-handle
+{
+  background:#D5DC8D;
+}
+
+.slick-row.ui-widget-content,.slick-cell
+{
+  background:none;
+  background-color:#eeeeee;
+  border:none;
+  border-bottom:solid 1px #ffffff;
+  color:#666666;
+  font-size:14px;
+  height:60px;
+  padding:0 5px;
+}
+
+.ui-datepicker-trigger
+{
+  margin-top:2px;
+  padding:0;
+  vertical-align:top;
+}
+
+body
+{
+  padding-bottom:80px;
+  padding-top:60px;
+}
+
+code
+{
+  font-size:80%;
+}
+
+html
+{
+  min-height:100%;
+  position:relative;
+}
+
+input.editor-checkbox
+{
+  border:0;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+input.editor-percentcomplete
+{
+  background:transparent;
+  border:0;
+  float:left;
+  height:100%;
+  margin:0;
+  outline:0;
+  padding:0;
+  width:100%;
+}
+
+input.editor-text
+{
+  background:transparent;
+  border:0;
+  height:100%;
+  margin:0;
+  outline:0;
+  padding:0;
+  width:100%;
+}
+
+select.editor-yesno
+{
+  margin:0;
+  vertical-align:middle;
+  width:100%;
+}

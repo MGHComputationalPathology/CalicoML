@@ -1,0 +1,10 @@
+*.pyc
+*~
+.idea
+venv/
+*.egg-info/
+*.xls
+*.xlsx
+.DS_Store
+.profile
+**/.ropeproject

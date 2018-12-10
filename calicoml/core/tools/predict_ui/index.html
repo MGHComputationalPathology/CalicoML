@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CalicoML Prediction Service</title>
+
+    <script type="text/javascript" src="js/external/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/external/jquery-ui-1.8.16.custom.min.js"></script>
+
+    <script type="text/javascript" src="js/external/jquery.event.drag-2.2.js"></script>
+    <script type="text/javascript" src="js/external/jquery.event.drop-2.2.js"></script>
+
+    <script type="text/javascript" src="js/external/slick.core.js"></script>
+    <script type="text/javascript" src="js/external/slick.cellrangedecorator.js"></script>
+    <script type="text/javascript" src="js/external/slick.cellrangeselector.js"></script>
+    <script type="text/javascript" src="js/external/slick.cellselectionmodel.js"></script>
+    <script type="text/javascript" src="js/external/slick.editors.js"></script>
+    <script type="text/javascript" src="js/external/slick.formatters.js"></script>
+    <script type="text/javascript" src="js/external/slick.grid.js"></script>
+
+    <script type="text/javascript" src="js/external/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/external/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="js/external/jquery.fileupload.js"></script>
+
+    <script type="text/javascript" src="js/external/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/predict.js"></script>
+    <script type="text/javascript" src="js/sample_grid.js"></script>
+
+    <link rel="stylesheet" href="predict.css" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="slick.grid.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">CalicoML</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Sample Data</h1>
+      <span class="btn btn-primary btn-file">
+        Browse <input id="fileupload" type="file" name="file" data-url="../upload"/>
+      </span>
+      <button id="load_training_data" class="btn btn-default" type="button" onclick="loadTrainingData()">Load training data</button>
+      <div id="data_container">
+
+      </div>
+
+      <div id="model_info">
+        <h2>Model info</h2>
+        <table>
+          <tr><td class="model_field_name">Model Name:</td><td id="model_name">NA</td></tr>
+          <tr><td class="model_field_name">Predicted Outcome:</td><td id="model_outcome">NA</td></tr>
+          <tr><td class="model_field_name">Training Set:</td><td id="model_training_set">NA</td></tr>
+          <tr><td class="model_field_name">Training Set AUC:</td><td id="model_training_auc">NA</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright (c) 2015-2018, MGH Computational Pathology</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

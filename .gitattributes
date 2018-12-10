@@ -1,0 +1,14 @@
+calicoml/core/tools/predict_ui/font-awesome/* -diff
+calicoml/core/tools/predict_ui/font-awesome/css/* -diff
+calicoml/core/tools/predict_ui/font-awesome/scss/* -diff
+calicoml/core/tools/predict_ui/font-awesome/fonts/* -diff
+calicoml/core/tools/predict_ui/js/external/* -diff
+calicoml/core/tools/predict_ui/js/jquery.min.js -diff
+calicoml/core/tools/predict_ui/js/bootstrap.min.js -diff
+calicoml/core/tools/predict_ui/slick.grid.css -diff
+calicoml/core/tools/predict_ui/js/bootstrap.js -diff
+calicoml/core/tools/predict_ui/bootstrap.css -diff
+calicoml/core/tools/predict_ui/css/bootstrap.css -diff
+calicoml/core/tools/predict_ui/js/sample_grid.js -diff
+calicoml/core/tools/predict_ui/images/* -diff
+calicoml/core/tools/predict_ui/img/* -diff

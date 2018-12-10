@@ -1,0 +1,7 @@
+pytest-runner
+teamcity-messages
+flake8==3.0.4
+pylint
+pep8
+nose
+rpy2==2.8.6
