@@ -14,8 +14,6 @@ from calicoml.core.serialization.model import roc_auc_function
 
 import numpy as np
 import nose
-from rpy2.robjects import FloatVector
-from rpy2.robjects.packages import importr
 from sklearn.metrics import confusion_matrix
 from scipy.stats import pearsonr
 
@@ -96,11 +94,18 @@ def test_auc_ci():
         print(roc.auc_ci)
         np.testing.assert_allclose(roc.auc_ci.estimate, roc.auc, atol=0.01)
 
-        proc = importr('pROC')
-        r_ci_obj = proc.ci(proc.roc(FloatVector(y_true), FloatVector(y_pred), ci=True), method='bootstrap')
-        r_ci_dict = dict(list(r_ci_obj.items()))
-        np.testing.assert_allclose(r_ci_dict['2.5%'], roc.auc_ci.low, atol=0.02)
-        np.testing.assert_allclose(r_ci_dict['97.5%'], roc.auc_ci.high, atol=0.02)
+        try:
+            from rpy2.robjects import FloatVector
+            from rpy2.robjects.packages import importr
+
+            proc = importr('pROC')
+            r_ci_obj = proc.ci(proc.roc(FloatVector(y_true), FloatVector(y_pred), ci=True), method='bootstrap')
+            r_ci_dict = dict(list(r_ci_obj.items()))
+            np.testing.assert_allclose(r_ci_dict['2.5%'], roc.auc_ci.low, atol=0.02)
+            np.testing.assert_allclose(r_ci_dict['97.5%'], roc.auc_ci.high, atol=0.02)
+
+        except ModuleNotFoundError:
+            print("WARNING: rpy2 unavailable. Won't check concordance with pROC")
 
     np.random.seed(0xC0FFEE)
     yield checkme, [1, 1, 1, 1, 0, 0, 0, 0] * 10, [1, 1, 1, 1, 0, 0, 0, 0] * 10
