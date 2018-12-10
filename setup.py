@@ -35,7 +35,7 @@ setup(
     version=version,
     packages=find_packages(),
     install_requires=read_requirements(),
-    url='https://bitbucket.org/mghcid/analytics',
+    url='https://github.com/MGHComputationalPathology/CalicoML',
     license='MIT',
     author='MGH Computational Pathology',
     author_email='mpacula@mgh.harvard.edu',
