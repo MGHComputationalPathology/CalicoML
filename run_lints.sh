@@ -14,7 +14,11 @@ flake8 --max-line-length=120 --ignore=F401,E731,E402,W291 calicoml/ tests/
 
 
 # JavaScipt lints
-echo -e "\n\nRunning JSHint..."
-find . -type f \( -iname "*.js" ! -iname "*.min.js" \) | grep -v scratch | grep -v venv | grep -v plugins | grep -v external | grep -v site-packages | xargs jshint
+if hash jshint 2>/dev/null; then
+    echo -e "\n\nRunning JSHint..."
+    find . -type f \( -iname "*.js" ! -iname "*.min.js" \) | grep -v scratch | grep -v venv | grep -v plugins | grep -v external | grep -v site-packages | xargs jshint
+else
+    echo "JSHint unavailable. Skipping JS lints."
+fi
 
 echo -e "\n\nAll lints passed successfully."

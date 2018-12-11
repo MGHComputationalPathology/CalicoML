@@ -95,8 +95,8 @@ def test_auc_ci():
         np.testing.assert_allclose(roc.auc_ci.estimate, roc.auc, atol=0.01)
 
         try:
-            from rpy2.robjects import FloatVector
-            from rpy2.robjects.packages import importr
+            from rpy2.robjects import FloatVector  # pylint: disable=import-error
+            from rpy2.robjects.packages import importr  # pylint: disable=import-error
 
             proc = importr('pROC')
             r_ci_obj = proc.ci(proc.roc(FloatVector(y_true), FloatVector(y_pred), ci=True), method='bootstrap')
@@ -104,7 +104,7 @@ def test_auc_ci():
             np.testing.assert_allclose(r_ci_dict['2.5%'], roc.auc_ci.low, atol=0.02)
             np.testing.assert_allclose(r_ci_dict['97.5%'], roc.auc_ci.high, atol=0.02)
 
-        except ModuleNotFoundError:
+        except ImportError:
             print("WARNING: rpy2 unavailable. Won't check concordance with pROC")
 
     np.random.seed(0xC0FFEE)

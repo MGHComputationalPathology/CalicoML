@@ -52,7 +52,8 @@ load-plugins=
 # R1705: no-else-return. This is broken in pylint 2.1.1 and gets tripped up on "return x if condition else y"
 # C1801: len-as-condition. There are too many exceptions to this (e.g. numpy arrays).
 # W1113: keyword-arg-before-vararg. Fixing this for Py3 creates invalid syntax in Py2
-disable=I0011,R0201,C0411,C0412,C0413,R0204,W1202,R0801,R0205,R1705,C1801,W1113
+# W0107: unnecessary pass.
+disable=I0011,R0201,C0411,C0412,C0413,R0204,W1202,R0801,R0205,R1705,C1801,W1113,W0107
 
 
 [REPORTS]

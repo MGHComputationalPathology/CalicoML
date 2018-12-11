@@ -65,8 +65,8 @@ fetchPredictions = function() {
         dataType: "json",
         contentType: "application/json",
         type: "POST"
-    }).done(function(predictions) {
-        var predictions = predictions.scores;
+    }).done(function(predictions_obj) {
+        var predictions = predictions_obj.scores;
         if(predictions.length != grid.sample_data.length) {
             alert('Error: Number of predictions does not match the number of samples.');
             return;
